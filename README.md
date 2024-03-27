@@ -1,17 +1,14 @@
 # Wise - A Pair-Programming Assistant Tool
 
 # Description
-
 This project aims to implement a Pair-Programming IA Assistant with no costs.
 
 # Dependencies
-------------
 - Python 3.12.2
 - GPT4Free: https://github.com/xtekky/gpt4free
 - AutoGen: https://github.com/microsoft/autogen
   
 # Installation
-------------
 1. Clone this repository:
    ```
    git clone https://github.com/donburgareli/wise_-_pair-programming-tool.git
@@ -30,7 +27,6 @@ This project aims to implement a Pair-Programming IA Assistant with no costs.
    Be sure to check the repositories for more information / setup proccesses.
    
 # Usage
------
 1. Navigate to the project directory:
    ```
    cd wise-pair-programming-tool
@@ -42,7 +38,6 @@ This project aims to implement a Pair-Programming IA Assistant with no costs.
    ```
 
 # Contributing
-------------
 Contributions are welcome! Here's how you can contribute:
 - Fork the repository
 - Create your feature branch (`git checkout -b feature/YourFeature`)
@@ -51,5 +46,5 @@ Contributions are welcome! Here's how you can contribute:
 - Create a new Pull Request
 
 # License
--------
+
 MIT License
