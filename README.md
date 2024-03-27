@@ -2,7 +2,7 @@
 
 # Description
 
-This project aims to demonstrate the integration of features from two different GitHub repositories into a single Python application. It leverages the capabilities provided by Repository A and Repository B to accomplish specific tasks or enhance functionality.
+This project aims to implement a Pair-Programming IA Assistant with no costs.
 
 # Dependencies
 ------------
