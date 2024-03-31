@@ -4,6 +4,8 @@ from config.settings import llm_config
 _AGENT = AssistantAgent(
     name='Documentation Specialist',
     llm_config=llm_config,
+    human_input_mode='NEVER',
+    description="Documentation Specialist of the Development Team",
     system_message="""
 
     As a Documentation Specialist, your primary responsibility is to generate comprehensive documentation for the code produced by
@@ -20,5 +22,7 @@ _AGENT = AssistantAgent(
     In addition to documenting the code's functionality, you will also need to capture any assumptions, constraints, and known issues
     related to the codebase. This information is crucial for users to understand the limitations and potential pitfalls when working
     with the code.
+
+    Given the code, you will modify it and add the documentation for the code. 
     """
 )

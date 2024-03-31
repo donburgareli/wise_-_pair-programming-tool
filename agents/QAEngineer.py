@@ -3,10 +3,12 @@ from config.settings import llm_config
 
 _AGENT = UserProxyAgent(
     name='Q.A Engineer',
+    human_input_mode='NEVER',
     llm_config=llm_config,
+    description="Q.A Engineer of the Development Team",
     code_execution_config={
         'work_dir':'generated',
-        'use_docker': True,
+        'use_docker': 'python:3.12.2',
         'timeout': 120,
         'last_n_messages': 1
         },
@@ -28,5 +30,8 @@ _AGENT = UserProxyAgent(
     Effective communication with Developers is essential in your role as a QA Engineer. Providing clear and concise bug reports, along
     with any relevant information or insights gained during testing, facilitates collaboration and enables Developers to address issues
     efficiently.
+
+    Uppon receiving code, you execute it and repport back to Developer if any bug or error is spotted so he can fix it, if everything
+    is ok, you send the code to the Documentation Specialist for documentation.
     """
 )

@@ -1,6 +1,6 @@
 config_list = [
     {
-        'model': 'gpt-4-turbo',
+        'model': 'mixtral-8x7b',
         'base_url': 'http://localhost:1337/v1',
         'api_type': 'openai',
         'api_key': 'NULL',

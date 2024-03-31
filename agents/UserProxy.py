@@ -1,7 +1,7 @@
-from autogen import UserProxyAgent
+from autogen.agentchat.contrib.retrieve_user_proxy_agent import RetrieveUserProxyAgent
 from config.settings import llm_config 
 
-_AGENT = UserProxyAgent(
+_AGENT = RetrieveUserProxyAgent(
     name='Client',
     
     code_execution_config={
