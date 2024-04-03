@@ -1,9 +1,9 @@
 from autogen import AssistantAgent
-from config.settings import llm_config 
+from config.settings import LLM_CONFIG 
 
 _AGENT = AssistantAgent(
     name='Documentation Specialist',
-    llm_config=llm_config,
+    llm_config=LLM_CONFIG,
     human_input_mode='NEVER',
     description="Documentation Specialist of the Development Team",
     system_message="""

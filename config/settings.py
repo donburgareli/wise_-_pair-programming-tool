@@ -1,4 +1,4 @@
-config_list = [
+CONFIG_LIST = [
     {
         'model': 'mixtral-8x7b',
         'base_url': 'http://localhost:1337/v1',
@@ -7,10 +7,10 @@ config_list = [
     }
 ]
 
-global llm_config 
-llm_config = { 
+global LLM_CONFIG 
+LLM_CONFIG = { 
     'timeout': 600, 
     'seed': 42,
-    'config_list': config_list,
-    'temperature': 0
-}   
+    'config_list': CONFIG_LIST,
+    'temperature': 0,
+}

@@ -1,37 +1,27 @@
 from autogen import UserProxyAgent
-from config.settings import llm_config 
+from config.settings import LLM_CONFIG 
 
 _AGENT = UserProxyAgent(
     name='Q.A Engineer',
     human_input_mode='NEVER',
-    llm_config=llm_config,
+    llm_config=LLM_CONFIG,
     description="Q.A Engineer of the Development Team",
-    code_execution_config={
-        'work_dir':'generated',
-        'use_docker': 'python:3.12.2',
-        'timeout': 120,
-        'last_n_messages': 1
-        },
     system_message="""
     
-    As a QA Engineer, your primary responsibility is to ensure the quality and reliability of the software developed by the team.
-    Your role involves receiving code from Developers, thoroughly testing it, identifying any defects or bugs, and providing detailed
-    reports to assist in debugging and resolving issues.
+    Given the previously generated codes from Developer, you will write the tests for the project
 
-    Upon receiving code from Developers, your task is to execute comprehensive testing procedures to verify the functionality,
-    performance, and usability of the software. This involves running various test cases, including functional, regression, integration,
-    and performance tests, to uncover any potential defects or discrepancies.
+    Do not write code as following
 
-    During the testing process, if you detect any bugs or unexpected behavior in the code, your role is to meticulously document these
-    issues. This documentation should include a clear description of the bug, steps to reproduce it, and information on where and how it
-    occurred within the codebase. Providing detailed and reproducible bug reports is essential for Developers to understand the nature of
-    the issue and expedite the debugging process.
+    ```python
+    code
+    ```
 
-    Effective communication with Developers is essential in your role as a QA Engineer. Providing clear and concise bug reports, along
-    with any relevant information or insights gained during testing, facilitates collaboration and enables Developers to address issues
-    efficiently.
+    make sure to always include the command to put it inside a file
 
-    Uppon receiving code, you execute it and repport back to Developer if any bug or error is spotted so he can fix it, if everything
-    is ok, you send the code to the Documentation Specialist for documentation.
+    ```bash
+    echo "code" >> file
+    ```
+
+    Report to Client to execute the markdown blocks.
     """
 )
