@@ -29,7 +29,7 @@ Installation
 -----------
 1. Clone this repository:
    ```
-   git clone https://github.com/donburgareli/wise-pair-programming-tool.git
+   git clone https://github.com/wisexld-dev/wise-pair-programming-tool.git
    ```
 
 2. Create conda environment
